@@ -12,6 +12,9 @@ import Footer from './Components/Footer';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import MyCourses from './Components/MyCourses';
+import './App.css';
+
+import IdleTimerContainer from './Components/IdleTimerContainer'
 
 class App extends Component {
   render() {
@@ -59,6 +62,7 @@ class App extends Component {
           <Route path='/login' exact component={Login}></Route>
           <Route path='/signup' exact component={Signup}></Route>
           <Route path='/mycourses' exact component={MyCourses}></Route>
+           
           <Redirect to='/'></Redirect>
         </Switch>
         <br />
@@ -68,6 +72,9 @@ class App extends Component {
         <Footer />
         <br />
         <br />
+        <div className='App'>
+             <IdleTimerContainer></IdleTimerContainer>
+           </div>
       </>
     );
   }
